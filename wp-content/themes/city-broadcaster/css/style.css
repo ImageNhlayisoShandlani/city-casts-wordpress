@@ -1,7 +1,57 @@
+
 html,
 body{
-    background-color: black !important;
+    background-color: #fff !important;
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
+
+/**
+** 
+**START THE Header Styling**
+**
+**/
+
+nav.navbar{
+    margin: 0;
+    background-color: #222 !important; /**Secondary Color */
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background: url(/wp-content/uploads/2025/02/PGlen-Radio-1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-nav{
+    margin-left: 5rem;
+}
+
+a.active{
+    color: #feb401 !important;  /**Primary Color */
+    font-weight: bolder;
+}
+
+a.nav-link{
+    cursor: pointer;
+    transition: ease-in 0.3ms;
+    color: #fff;
+}
+
+a.nav-link:hover{
+    transform: scale(1.1);
+}
+
+
+/**
+** 
+**END THE Header Styling**
+**
+**/
