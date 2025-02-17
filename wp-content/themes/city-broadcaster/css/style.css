@@ -34,6 +34,9 @@ nav.navbar{
     margin-left: 5rem;
 }
 
+.navbar-toggler{
+    background-color: #feb401 !important;
+}
 a.active{
     color: #feb401 !important;  /**Primary Color */
     font-weight: bolder;
@@ -50,6 +53,35 @@ a.nav-link:hover{
 }
 
 
+/**
+** 
+**END THE Header Styling**
+**
+**/
+
+
+
+/**
+** 
+**START THE Header Styling**
+**
+**/
+
+
+footer{
+    background: #222;
+}
+
+footer a{
+    text-decoration: none;
+}
+.me-4, i, .fa, svg{
+    color: #feb401 !important;
+}
+
+.custom-heading, footer p{
+    color: #fff;
+}
 /**
 ** 
 **END THE Header Styling**
