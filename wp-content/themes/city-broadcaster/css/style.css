@@ -19,6 +19,7 @@ nav.navbar{
     background-color: #222 !important; /**Secondary Color */
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 
 .navbar-brand{
@@ -63,7 +64,7 @@ a.nav-link:hover{
 
 /**
 ** 
-**START THE Header Styling**
+**START Footer Styling**
 **
 **/
 
@@ -84,6 +85,53 @@ footer a{
 }
 /**
 ** 
-**END THE Header Styling**
+**END Footer Styling**
+**
+**/
+
+
+
+/**
+** 
+** Start Page Carousel **
+**
+**/
+
+
+
+.carousel-caption{
+    background: #feb401;
+    color: #222;
+}
+
+
+.carousel-caption h5{
+    color: black;
+}
+
+.carousel-caption p{
+    color: #222;
+}
+
+.carousel-item img{
+    height: 90vh !important;
+}
+
+button.active{
+    background-color: black !important;
+}
+
+.carousel-control-next, 
+.carousel-control-prev{
+    color: #feb401 !important;
+    transform: scale(1.75);
+}
+
+.carousel-control-next-icon{
+    color: #feb401 !important;   
+}
+/**
+** 
+** End Page Carousel **
 **
 **/
