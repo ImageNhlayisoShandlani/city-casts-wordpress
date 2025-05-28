@@ -1,12 +1,16 @@
-
-html,
-body{
-    background-color: #fff !important;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+:root {
+  --main-color: #222;
+  --accent-color: #feb201;
+  --secondary-color: #59aceb;
+  --main-color--light: #212121;
 }
-
+html,
+body {
+  background-color: #fff !important;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
 
 /**
 ** 
@@ -14,45 +18,69 @@ body{
 **
 **/
 
-nav.navbar{
-    margin: 0;
-    background-color: #222 !important; /**Secondary Color */
-    position: fixed;
-    width: 100%;
-    z-index: 999;
+nav.navbar {
+  margin: 0;
+  background-color: #222 !important; /**Secondary Color */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
-.navbar-brand{
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    background: url(/wp-content/uploads/2025/02/PGlen-Radio-1.png) no-repeat;
-    background-size: cover;
-    background-position: center;
+.container-fluid {
+  padding: 5px 60px !important;
 }
 
-.navbar-nav{
-    margin-left: 5rem;
+.navbar-brand {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background: url(/wp-content/uploads/2025/02/PGlen-Radio-1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.navbar-toggler{
-    background-color: #feb401 !important;
-}
-a.active{
-    color: #feb401 !important;  /**Primary Color */
-    font-weight: bolder;
+.navbar-nav {
+  margin-left: 5rem;
 }
 
-a.nav-link{
-    cursor: pointer;
-    transition: ease-in 0.3ms;
-    color: #fff;
+.navbar-toggler {
+  background-color: #feb401 !important;
+}
+a.active {
+  color: #feb401 !important; /**Primary Color */
+  font-weight: bolder;
 }
 
-a.nav-link:hover{
-    transform: scale(1.1);
+a.nav-link {
+  cursor: pointer;
+  transition: ease-in 0.3ms;
+  color: #fff;
 }
 
+a.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  transition: ease-in-out 0.5ms;
+}
+
+.play-button:hover {
+  color: #fff !important;
+  font-size: 1.65rem;
+}
 
 /**
 ** 
@@ -60,28 +88,29 @@ a.nav-link:hover{
 **
 **/
 
-
-
 /**
 ** 
 **START Footer Styling**
 **
 **/
 
-
-footer{
-    background: #222;
+footer {
+  background: #222;
 }
 
-footer a{
-    text-decoration: none;
+footer a {
+  text-decoration: none;
 }
-.me-4, i, .fa, svg{
-    color: #feb401 !important;
+.me-4,
+i,
+.fa,
+svg {
+  color: #feb401 !important;
 }
 
-.custom-heading, footer p{
-    color: #fff;
+.custom-heading,
+footer p {
+  color: #fff;
 }
 /**
 ** 
@@ -89,49 +118,116 @@ footer a{
 **
 **/
 
-
-
 /**
 ** 
 ** Start Page Carousel **
 **
 **/
 
-
-
-.carousel-caption{
-    background: #feb401;
-    color: #222;
+.carousel-caption {
+  background: #feb401;
+  color: #222;
 }
 
-
-.carousel-caption h5{
-    color: black;
+.carousel-caption h5 {
+  color: black;
 }
 
-.carousel-caption p{
-    color: #222;
+.carousel-caption p {
+  color: #222;
 }
 
-.carousel-item img{
-    height: 90vh !important;
+.carousel-item img {
+  height: 90vh !important;
 }
 
-button.active{
-    background-color: black !important;
+button.active {
+  background-color: black !important;
 }
 
-.carousel-control-next, 
-.carousel-control-prev{
-    color: #feb401 !important;
-    transform: scale(1.75);
+.carousel-control-next,
+.carousel-control-prev {
+  color: #feb401 !important;
+  transform: scale(1.75);
 }
 
-.carousel-control-next-icon{
-    color: #feb401 !important;   
+.carousel-control-next-icon {
+  color: #feb401 !important;
 }
 /**
 ** 
 ** End Page Carousel **
 **
 **/
+
+
+#home-shows {
+  height: 35vh;
+  padding: 0 !important;
+}
+
+.shows-wrap {
+  border-bottom: var(--secondary-color) 1px solid;
+  height: 100%;
+}
+
+.single-shows{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    color: #fff;
+    background: #444;
+}
+
+.show-image{
+    width: 60%;
+    height: 100%;
+    margin-right: 1rem;
+    aspect-ratio: 16/9;
+}
+
+
+.show-information{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.show-title{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.text p{
+    font-size: 14px;
+}
+
+.show-small{
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+.single-shows .play-button{
+    width: 150px;
+    height: fit-content;
+    border-radius: 10px;
+    border: #feb201 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    padding: 5px;
+
+}
+
+.play-button span{
+    font-size: 1rem;
+    color: var(--accent-color);
+}

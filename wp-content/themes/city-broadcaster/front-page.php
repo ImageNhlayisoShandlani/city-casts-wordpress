@@ -43,6 +43,62 @@ get_header();
         </button>
     </div>
 </section>
+
+<section class="container-fluid" id="home-shows">
+    <div class="row shows-wrap">
+        <?php
+        $shows = new WP_Query([
+            'post_type' => 'show',
+            'post_per_page' => 2
+        ]);
+
+        while ($shows->have_posts()) {
+            $shows->the_post();
+
+        ?>
+
+            <div class="single-shows col-md-6 on-air">
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="show-image" loading="lazy">
+                <div class="show-information">
+                    <div class="text">
+                        <h2 class="show-title"><i class="fa-solid fa-microphone"></i> <span><?php the_title(); ?></span></h2>
+                        <p><i class="fa-solid fa-clock"></i> <span><?php the_field('time') ?></span> </p>
+                        <p class="show-small">
+                            "<?php the_excerpt(); ?>"
+                        </p>
+                    </div>
+                    <button class="play-button">
+                        <i class="fa-solid fa-play"></i> <span>Listen Live</span>
+                    </button>
+                </div>
+            </div>
+        <?php
+        }
+
+        wp_reset_query();
+        ?>
+
+        <!-- <div class="single-shows col-md-6">
+            <img src="/wp-content/uploads/2025/05/photo-6.jpg" alt="" class="show-image" loading="lazy">
+            <div class="show-information">
+                <div class="text">
+                    <h2 class="show-title"><i class="fa-solid fa-microphone"></i> <span>Afternoon Stroll</span></h2>
+                    <p><i class="fa-solid fa-clock"></i> <span>06:00 - 11:59</span> </p>
+                    <p class="show-small">
+                        "
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                        "
+                    </p>
+                </div>
+                <button class="play-button">
+                    <i class="fa-solid fa-play"></i> <span>Listen Live</span>
+                </button>
+            </div>
+        </div> -->
+
+
+    </div>
+</section>
 <?php
 get_footer();
 ?>

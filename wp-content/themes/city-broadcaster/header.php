@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link <?php  if(is_front_page()) echo "active"; ?>" aria-current="page" href="#">Home</a>
+                        <a class="nav-link <?php if (is_front_page()) echo "active"; ?>" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shows</a>
@@ -32,11 +32,13 @@
                         <a class="nav-link">About Us</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <div class="right-header">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form>
+
+                    <button class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
-
