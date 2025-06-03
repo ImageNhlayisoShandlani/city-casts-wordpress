@@ -231,3 +231,142 @@ button.active {
     font-size: 1rem;
     color: var(--accent-color);
 }
+
+
+/**
+** 
+**START THE Header Styling**
+**
+**/
+
+#home-subscribe{
+   height: 75vh;
+  background: var(--accent-color);
+}
+
+#home-subscribe .col-md-12{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 75vh;
+}
+
+.heading-paragraph__color{
+  color: var(--main-color--light);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+#home-subscribe h3{
+  color: var(--main-color);
+  font-weight: light;
+  font-size: 36px;
+}
+
+#home-subscribe button{
+  background: var(--main-color--light);
+  color: var(--accent-color);
+  border-color: var(--main-color--light);
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+#presenters{
+  background: var(--main-color--light);
+}
+
+#presenters .col-md-12{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  height: fit-content;
+}
+
+#presenters .col-md-12 p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  color: #aaa;
+}
+
+#presenters .col-md-12 h3{
+  color: var(--secondary-color);
+  font-weight: light;
+  font-size: 36px;
+}
+
+
+.single-presenter {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.presenter--image{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.presenter--image div{
+  width: 100%;
+  height: 100%;
+  background: url(http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: ease-in-out 0.5ms;
+  cursor: pointer;
+}
+
+
+.presenter--image div:hover{
+  transform: scale(1.3);
+}
+
+.single-presenter h4{
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.single-presenter p{
+  color: #ccc;
+}
+
+.presenter-socials{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.presenter-socials a{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--accent-color) 1px solid;
+  transition: ease-in-out 0.5ms;
+  text-decoration: none;
+}
+
+.presenter-socials a:hover{
+  transform: scale(1.2);
+}

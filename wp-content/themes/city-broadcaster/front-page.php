@@ -99,6 +99,106 @@ get_header();
 
     </div>
 </section>
+
+<section class="container-fluid" id="home-subscribe">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="heading-paragraph__color">Our Newsletter</p>
+            <h3>Catch Up on What You’ve Missed</h3>
+            <p>Dive into our full episode library and catch up on all the exciting conversations, inspiring stories, and trending topics you’ve missed.</p>
+            <button class="play-button">
+                Subscribe
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-fluid" id="presenters">
+    <div class="row heading--sub-heading">
+        <div class="col-md-12">
+            <p>Our Presenters</p>
+            <h3>Meet the team that brings joy to your day to day life</h3>
+        </div>
+
+    </div>
+
+    <div class="row presenter-wrap">
+        <div class="col-md-3 single-presenter">
+            <div class="presenter--image">
+                <div>
+
+                </div>
+                <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
+            </div>
+            
+            <h4>Image Shandlani</h4>
+            <p>Afternoon Drive</p>
+            <div class="presenter-socials">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-3 single-presenter">
+            <div class="presenter--image">
+                <div>
+                    
+                </div>
+                <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
+            </div>
+            
+            <h4>Image Shandlani</h4>
+            <p>Afternoon Drive</p>
+            <div class="presenter-socials">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-3 single-presenter">
+            <div class="presenter--image">
+                <div>
+                    
+                </div>
+                <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
+            </div>
+            
+            <h4>Image Shandlani</h4>
+            <p>Afternoon Drive</p>
+            <div class="presenter-socials">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-3 single-presenter">
+            <div class="presenter--image">
+                <div>
+                    
+                </div>
+                <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
+            </div>
+            
+            <h4>Image Shandlani</h4>
+            <p>Afternoon Drive</p>
+            <div class="presenter-socials">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container0-fluid" id="news"></section>
 <?php
 get_footer();
 ?>
