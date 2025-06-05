@@ -100,20 +100,6 @@ get_header();
     </div>
 </section>
 
-<section class="container-fluid" id="home-subscribe">
-    <div class="row">
-        <div class="col-md-12">
-            <p class="heading-paragraph__color">Our Newsletter</p>
-            <h3>Catch Up on What You’ve Missed</h3>
-            <p>Dive into our full episode library and catch up on all the exciting conversations, inspiring stories, and trending topics you’ve missed.</p>
-            <button class="play-button">
-                Subscribe
-            </button>
-        </div>
-    </div>
-</section>
-
-
 <section class="container-fluid" id="presenters">
     <div class="row heading--sub-heading">
         <div class="col-md-12">
@@ -131,7 +117,7 @@ get_header();
                 </div>
                 <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
             </div>
-            
+
             <h4>Image Shandlani</h4>
             <p>Afternoon Drive</p>
             <div class="presenter-socials">
@@ -145,11 +131,11 @@ get_header();
         <div class="col-md-3 single-presenter">
             <div class="presenter--image">
                 <div>
-                    
+
                 </div>
                 <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
             </div>
-            
+
             <h4>Image Shandlani</h4>
             <p>Afternoon Drive</p>
             <div class="presenter-socials">
@@ -163,11 +149,11 @@ get_header();
         <div class="col-md-3 single-presenter">
             <div class="presenter--image">
                 <div>
-                    
+
                 </div>
                 <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
             </div>
-            
+
             <h4>Image Shandlani</h4>
             <p>Afternoon Drive</p>
             <div class="presenter-socials">
@@ -181,11 +167,11 @@ get_header();
         <div class="col-md-3 single-presenter">
             <div class="presenter--image">
                 <div>
-                    
+
                 </div>
                 <!-- <img src="http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png" alt="" loading="lazy"> -->
             </div>
-            
+
             <h4>Image Shandlani</h4>
             <p>Afternoon Drive</p>
             <div class="presenter-socials">
@@ -198,7 +184,83 @@ get_header();
     </div>
 </section>
 
-<section class="container0-fluid" id="news"></section>
+
+<section class="container-fluid" id="home-subscribe">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="heading-paragraph__color">Our Newsletter</p>
+            <h3>Catch Up on What You’ve Missed</h3>
+            <p>Dive into our full episode library and catch up on all the exciting conversations, inspiring stories, and trending topics you’ve missed.</p>
+            <button class="play-button">
+                Subscribe
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="container-fluid" id="news">
+    <div class="row heading--sub-heading">
+        <div class="col-md-12">
+            <p>Latest News</p>
+            <h3>Catch up on whats happening around you</h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 single-news">
+            <div class="top-news">
+                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
+                <div>
+                    <h5>22</h5>
+                    <p>Dec</p>
+                </div>
+            </div>
+            <h4>Caspper Chats With LTIDO</h4>
+            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+
+            <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
+        </div>
+
+        <div class="col-md-4 single-news">
+            <div class="top-news">
+                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
+                <div>
+                    <h5>22</h5>
+                    <p>Dec</p>
+                </div>
+            </div>
+            <h4>Caspper Chats With LTIDO</h4>
+            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+
+            <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
+        </div>
+
+        <div class="col-md-4 single-news">
+            <div class="top-news">
+                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
+                <div>
+                    <h5>22</h5>
+                    <p>Dec</p>
+                </div>
+            </div>
+            <h4>Caspper Chats With LTIDO</h4>
+            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+
+            <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
+        </div>
+    </div>
+</section>
+
 <?php
 get_footer();
 ?>
