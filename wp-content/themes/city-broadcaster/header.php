@@ -17,13 +17,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link <?php if (is_front_page()) echo "active"; ?>" aria-current="page" href="#">Home</a>
+                        <a class="nav-link <?php if (is_front_page()) echo "active"; ?>" aria-current="page" href="<?php echo home_url();?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shows</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Listen Live</a>
+                        <a class="nav-link <?php if(is_post_type_archive('show')) echo "active";?>" href=" <?php echo site_url('/shows'); ?>">Shows</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Watch</a>

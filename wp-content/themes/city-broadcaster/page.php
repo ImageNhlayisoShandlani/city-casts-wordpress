@@ -1,6 +1,11 @@
 <?php
-
+//include "./template-parts/page-header.php";
 get_header();
-?>
 
-<p>alsjf</p>
+while(have_posts()){
+    the_post();
+
+    //page_header(the_title());
+}
+
+
