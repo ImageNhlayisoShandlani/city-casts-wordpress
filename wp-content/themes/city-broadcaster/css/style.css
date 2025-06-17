@@ -160,7 +160,6 @@ button.active {
 **
 **/
 
-
 #home-shows {
   height: 35vh;
   padding: 0 !important;
@@ -171,67 +170,63 @@ button.active {
   height: 100%;
 }
 
-.single-shows{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-between;
-    color: #fff;
-    background: #444;
+.single-shows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+  color: #fff;
+  background: #444;
 }
 
-.show-image{
-    width: 60%;
-    height: 100%;
-    margin-right: 1rem;
-    aspect-ratio: 16/9;
+.show-image {
+  width: 60%;
+  height: 100%;
+  margin-right: 1rem;
+  aspect-ratio: 16/9;
 }
 
-
-.show-information{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+.show-information {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
-.show-title{
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 700;
-}
-
-.text p{
-    font-size: 14px;
+.show-title {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
 }
 
-.show-small{
-    color: #aaa;
-    font-size: 12px;
+.text p {
+  font-size: 14px;
 }
 
-
-.single-shows .play-button{
-    width: 150px;
-    height: fit-content;
-    border-radius: 10px;
-    border: #feb201 2px solid;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.5rem;
-    padding: 5px;
-
+.show-small {
+  color: #aaa;
+  font-size: 12px;
 }
 
-.play-button span{
-    font-size: 1rem;
-    color: var(--accent-color);
+.single-shows .play-button {
+  width: 150px;
+  height: fit-content;
+  border-radius: 10px;
+  border: #feb201 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding: 5px;
 }
 
+.play-button span {
+  font-size: 1rem;
+  color: var(--accent-color);
+}
 
 /**
 ** 
@@ -239,12 +234,12 @@ button.active {
 **
 **/
 
-#home-subscribe{
-   height: 75vh;
+#home-subscribe {
+  height: 75vh;
   background: var(--accent-color);
 }
 
-#home-subscribe .col-md-12{
+#home-subscribe .col-md-12 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,21 +247,22 @@ button.active {
   height: 75vh;
 }
 
-.heading-paragraph__color{
+.heading-paragraph__color {
   color: var(--main-color--light);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
   font-weight: 700;
   font-size: 22px;
 }
 
-#home-subscribe h3{
+#home-subscribe h3 {
   color: var(--main-color);
   font-weight: light;
   font-size: 36px;
 }
 
-#home-subscribe button{
+#home-subscribe button {
   background: var(--main-color--light);
   color: var(--accent-color);
   border-color: var(--main-color--light);
@@ -278,12 +274,12 @@ button.active {
 }
 
 #presenters,
-#news{
+#news {
   background: var(--main-color--light);
 }
 
 #presenters .col-md-12,
-#news .col-md-12{
+#news .col-md-12 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,8 +289,9 @@ button.active {
 }
 
 #presenters .col-md-12 p,
-#news .col-md-12 p{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#news .col-md-12 p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
   font-weight: 700;
   font-size: 22px;
@@ -302,12 +299,11 @@ button.active {
 }
 
 #presenters .col-md-12 h3,
-#news .col-md-12 h3{
+#news .col-md-12 h3 {
   color: var(--secondary-color);
   font-weight: light;
   font-size: 36px;
 }
-
 
 .single-presenter {
   height: 75vh;
@@ -317,41 +313,42 @@ button.active {
   flex-direction: column;
 }
 
-.presenter--image{
+.presenter--image {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.presenter--image div{
+.presenter--image div {
   width: 100%;
   height: 100%;
-  background: url(http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png) no-repeat;
+  background: url(http://localhost:10058/wp-content/uploads/2025/02/msizi-2.png)
+    no-repeat;
   background-position: center;
   background-size: cover;
   transition: ease-in-out 0.5ms;
   cursor: pointer;
 }
 
-
-.presenter--image div:hover{
+.presenter--image div:hover {
   transform: scale(1.3);
 }
 
-.single-presenter h4{
+.single-presenter h4 {
   color: #fff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
   font-weight: 700;
   margin-top: 1rem;
 }
 
-.single-presenter p{
+.single-presenter p {
   color: #ccc;
 }
 
-.presenter-socials{
+.presenter-socials {
   width: 100%;
   padding: 12px;
   display: flex;
@@ -359,7 +356,7 @@ button.active {
   justify-content: space-evenly;
 }
 
-.presenter-socials a{
+.presenter-socials a {
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -371,11 +368,9 @@ button.active {
   text-decoration: none;
 }
 
-.presenter-socials a:hover{
+.presenter-socials a:hover {
   transform: scale(1.2);
 }
-
-
 
 /**
 **
@@ -385,12 +380,12 @@ button.active {
 **
 */
 
-.single-news{
+.single-news {
   gap: 1rem;
   height: fit-content;
 }
 
-.top-news{
+.top-news {
   width: 100%;
   height: 230px;
   overflow: hidden;
@@ -399,7 +394,7 @@ button.active {
   margin-bottom: 1rem;
 }
 
-.top-news img{
+.top-news img {
   aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
@@ -407,11 +402,10 @@ button.active {
   cursor: pointer;
 }
 
-
-.top-news img:hover{
+.top-news img:hover {
   transform: scale(1.3);
 }
-.top-news div{
+.top-news div {
   width: 60px;
   height: 60px;
   background: var(--accent-color);
@@ -423,49 +417,50 @@ button.active {
   top: 10px;
   left: 10px;
   border-radius: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
   text-wrap: wrap;
   padding-top: 10px;
 }
 
-.top-news div h5{
+.top-news div h5 {
   margin-bottom: -5px;
   color: var(--main-color);
   font-weight: 700;
 }
 
-.single-news h4{
+.single-news h4 {
   color: #fff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
 }
 
-
-.news-write-up{
+.news-write-up {
   color: #888;
 }
 
-.single-news .play-button{
+.single-news .play-button {
   width: 150px;
   display: flex;
   justify-content: flex-start;
 }
 
-.single-news .play-button span{
-  margin-right: .5rem;
+.single-news .play-button span {
+  margin-right: 0.5rem;
 }
 
-.page-header__bread{
+.page-header__bread {
   width: 100%;
   height: 60vh;
-  background: url(http://localhost:10058/wp-content/uploads/2025/06/blog-4.jpg)
+  background: url(http://localhost:10058/wp-content/uploads/2025/06/blog-4.jpg);
 }
 
-.page-header__bread div{
+.page-header__bread div {
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,24 +468,24 @@ button.active {
   flex-direction: column;
 }
 
-.page-header__bread div h3{
+.page-header__bread div h3 {
   font-weight: 700;
   font-style: italic;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.page-header__bread div a{
+.page-header__bread div a {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: bolder;
 }
 
-#shows{
+#shows {
   background: #000;
-
 }
 
-#shows__heading .col-md-6{
+#shows__heading .col-md-6 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -499,29 +494,49 @@ button.active {
   padding: 2rem 0;
 }
 
-#shows__heading .col-md-6 span{
+#shows__heading .col-md-6 span {
   color: var(--accent-color);
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-#shows__heading .col-md-6 h2{
+#shows__heading .col-md-6 h2 {
   color: #888;
 }
 
-#shows__heading .col-md-6 p{
+#shows__heading .col-md-6 p {
   font-weight: 400;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
 }
 
-#shows .single-shows{
+#shows .single-shows {
   height: 40vh;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
 
-#shows hr{
+#shows hr {
   color: red;
+}
+
+.show-title .on-air {
+  width: 5.5rem;
+  height: 1rem;
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 3px;
+}
+
+a.single-shows {
+  text-decoration: none !important;
+}
+
+.row .show-title:not(:first-child) .on-air {
+  display: none !important;
 }

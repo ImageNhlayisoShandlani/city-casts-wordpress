@@ -47,35 +47,144 @@ get_header();
 <section class="container-fluid" id="home-shows">
     <div class="row shows-wrap">
         <?php
-        $shows = new WP_Query([
+        $count = 0;
+        $now = current_time('H:i:s');
+        $currentShow = new WP_Query([
             'post_type' => 'show',
-            'post_per_page' => 2
+            'posts_per_page' => 1,
+            'meta_query' => [
+                'relation' => 'AND',
+                [
+                    'key' => 'start_time',
+                    'compare' => '<=',
+                    'value' => $now,
+                    'type' => 'TIME'
+                ],
+                [
+                    'key' => 'end_time',
+                    'compare' => '>',
+                    'value' => $now,
+                    'type' => 'TIME'
+                ]
+            ],
         ]);
 
-        while ($shows->have_posts()) {
-            $shows->the_post();
-
+        
+        while ($currentShow->have_posts()) {
+            $currentShow->the_post();
+            $count++;
         ?>
 
-            <div class="single-shows col-md-6 on-air">
+            <a href="<?php the_permalink();?>" class="single-shows col-md-6 on-air">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="show-image" loading="lazy">
                 <div class="show-information">
                     <div class="text">
-                        <h2 class="show-title"><i class="fa-solid fa-microphone"></i> <span><?php the_title(); ?></span></h2>
-                        <p><i class="fa-solid fa-clock"></i> <span><?php the_field('time') ?></span> </p>
-                        <p class="show-small">
-                            "<?php the_excerpt(); ?>"
-                        </p>
+                        <h2 class="show-title"><i class="fa-solid fa-microphone"></i> <span><?php the_title(); ?></span>
+
+                            <?php
+
+                            if ($count == 1) {
+                            ?>
+                                <span class="on-air">On Air</span>
+                        </h2>
+                    <?php
+
+                            }
+                    ?>
+
+                    <p><i class="fa-solid fa-clock"></i> <span><?php echo get_field('start_time') . ' - ' .  get_field('end_time'); ?></span> </p>
+                    <p class="show-small">
+                        "<?php the_excerpt(); ?>"
+                    </p>
                     </div>
-                    <button class="play-button">
-                        <i class="fa-solid fa-play"></i> <span>Listen Live</span>
-                    </button>
+                    <?php
+                    if ($count == 1) {
+                    ?>
+                        <button class="play-button">
+
+
+
+
+                            <i class="fa-solid fa-play"></i> <span>Listen Live</span>
+
+
+                        </button>
+                    <?php
+                    }
+                    ?>
                 </div>
-            </div>
+            </a>
         <?php
         }
 
         wp_reset_query();
+        $nextShow = new WP_Query([
+            'post_type' => 'show',
+            'posts_per_page' => 1,
+            'meta_key' => 'start_time',
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+            'meta_query' =>
+            [
+                'key' => 'start_time',
+                'compare' => '>=',
+                'value' => $now,
+                'type' => 'TIME'
+            ],
+
+        ]);
+        while ($nextShow->have_posts()) {
+            $nextShow->the_post();
+            //$count++;
+        ?>
+
+           <a href="<?php the_permalink();?> "class="single-shows col-md-6 on-air">
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="show-image" loading="lazy">
+                <div class="show-information">
+                    <div class="text">
+                        <h2 class="show-title"><i class="fa-solid fa-microphone"></i> <span><?php the_title(); ?></span>
+
+                            <?php
+
+                            if ($count == 1) {
+                            ?>
+                                <!-- <span class="on-air">On Air</span> -->
+                        </h2>
+                    <?php
+
+                            }
+                    ?>
+
+                    <p><i class="fa-solid fa-clock"></i> <span><?php echo get_field('start_time') . ' - ' .  get_field('end_time'); ?></span> </p>
+                    <p class="show-small">
+                        "<?php the_excerpt(); ?>"
+                    </p>
+                    </div>
+                    <?php
+                    if ($count == 1) {
+                    ?>
+                        <!-- <button class="play-button">
+
+
+
+
+                         <i class="fa-solid fa-play"></i> <span>Listen Live</span>
+
+
+
+
+                        </button> -->
+
+
+                    <?php
+                    }
+                    ?>
+                </div>
+            </a>
+        <?php
+        }
+        wp_reset_query();
+        $count = 0;
         ?>
 
         <!-- <div class="single-shows col-md-6">
@@ -211,53 +320,40 @@ get_header();
     </div>
 
     <div class="row">
-        <div class="col-md-4 single-news">
+
+    <?php
+    $latestNews = new WP_Query([
+        'post_type' => 'article',
+        'posts_per_page' => 3
+    ]);
+
+    while($latestNews->have_posts()){
+        $latestNews->the_post();
+
+
+        ?>
+
+        <a href="<?php the_permalink();?>" class="col-md-4 single-news" style="text-decoration: none;">
             <div class="top-news">
-                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
+                <img src="<?php the_post_thumbnail();?>" alt="" loading="lazy">
                 <div>
                     <h5>22</h5>
-                    <p>Dec</p>
+                    <p style="color: black;">Dec</p>
                 </div>
             </div>
-            <h4>Caspper Chats With LTIDO</h4>
-            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+            <h4><?php the_title(); ?></h4>
+            <p class="news-write-up"><?php echo get_the_excerpt();?></p>
 
             <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
-        </div>
+        </a>
 
-        <div class="col-md-4 single-news">
-            <div class="top-news">
-                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
-                <div>
-                    <h5>22</h5>
-                    <p>Dec</p>
-                </div>
-            </div>
-            <h4>Caspper Chats With LTIDO</h4>
-            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+        <?php
+    }
 
-            <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
-        </div>
+    wp_reset_query();
+    ?>
 
-        <div class="col-md-4 single-news">
-            <div class="top-news">
-                <img src="/wp-content/uploads/2025/06/blog-4.jpg" alt="" loading="lazy">
-                <div>
-                    <h5>22</h5>
-                    <p>Dec</p>
-                </div>
-            </div>
-            <h4>Caspper Chats With LTIDO</h4>
-            <p class="news-write-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
 
-            <button class="play-button"><span>Read More</span> <i class="fa-regular fa-circle-right"></i></button>
-        </div>
     </div>
 </section>
 

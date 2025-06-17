@@ -23,7 +23,10 @@
                         <a class="nav-link <?php if(is_post_type_archive('show')) echo "active";?>" href=" <?php echo site_url('/shows'); ?>">Shows</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Watch</a>
+                        <a class="nav-link <?php if(is_post_type_archive('article')) echo "active";?>" href=" <?php echo site_url('/articles'); ?>">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if(is_post_type_archive('channel')) echo "active";?>" href=" <?php echo site_url('/channels'); ?>">Watch</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">About Us</a>
